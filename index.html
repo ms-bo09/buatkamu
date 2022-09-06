@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Hai kamu</title>
+    <style>
+        body {
+            font-family: 'Poppins';
+        }
+        @media screen and (min-width: 890px) {
+            img {
+                width: 20%;
+                height: auto;
+            }
+            button {
+                margin-top: 200px !important;
+            }
+        }
+        @media screen and (min-width: 466px) {
+            img {
+                width: 50%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-image" style="background-image: url('img.jpg');height: 100vh;">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-white fw-bold text-center mt-4">Hai Kamu...</h1>
+        </div>
+        <div class="row">
+            <center>
+                <img class="img-thumbnail" src="meme3.jpg" alt="" width="60%" height="auto" id="image">
+                <img class="img-thumbnail d-none" src="sad.gif" alt="" width="80%" height="auto" id="image2">
+            </center>
+        </div>
+        <div class="row">
+            <h4 class="text-white text-center mt-4" id="aa">Boleh minta tolong klik tombol bawah ini, aku mau bilang sesuatu</h4>
+            <h4 class="text-white text-center mt-4 d-none" id="bb">I LOVE YOU</h4>
+        </div>
+        <div class="row">
+            <center>
+                <button class="btn btn-warning" style="margin-top:10%" onclick="klik()" id="ilang">Klik me</button>
+            </center>
+        </div>
+        <audio controls autoplay loop style="display:none;">
+            <source src="au.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+    <script>
+        function klik() {
+            let timerInterval;
+            Swal.fire({
+                timer: 3500,
+                html: 'Sudah ku maafkan salahmu<br><b class="d-none"></b>',
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()
+                    const b = Swal.getHtmlContainer().querySelector('b')
+                    timerInterval = setInterval(() => {
+                    b.textContent = Swal.getTimerLeft()
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                }
+            }).then((result) => {
+                Swal.fire({
+                    timer: 3500,
+                    html: 'Sudah ku relakan pergimu<br><b class="d-none"></b>',
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                        b.textContent = Swal.getTimerLeft()
+                        }, 100)
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval)
+                    }
+                }).then((result) => {
+                    Swal.fire({
+                        timer: 3500,
+                        html: 'Mungkin memang dia yang terbaik untukmu<br><b class="d-none"></b>',
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading()
+                            const b = Swal.getHtmlContainer().querySelector('b')
+                            timerInterval = setInterval(() => {
+                            b.textContent = Swal.getTimerLeft()
+                            }, 100)
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval)
+                        }
+                    }).then((result) => {
+                        Swal.fire({
+                            text: 'Jaga diri baik baik disana ya',
+                            timer: 3500,
+                            html: 'Jaga diri baik baik disana ya<br><b class="d-none"></b>',
+                            timerProgressBar: true,
+                            didOpen: () => {
+                                Swal.showLoading()
+                                const b = Swal.getHtmlContainer().querySelector('b')
+                                timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft()
+                                }, 100)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        })
+                    }).then((result) => {
+                        Swal.fire({
+                            text: 'Semoga bahagia di pelukannya',
+                            timer: 3500,
+                            html: 'Semoga bahagia di pelukannya<br><b class="d-none"></b>',
+                            timerProgressBar: true,
+                            didOpen: () => {
+                                Swal.showLoading()
+                                const b = Swal.getHtmlContainer().querySelector('b')
+                                timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft()
+                                }, 100)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        })
+                    }).then((result) => {
+                        Swal.fire({
+                            text: 'Good Bye Cantikk',
+                            imageUrl: 'meme2.jpg',
+                            html: 'Good Bye Cantikk<br><b class="d-none"></b>',
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            timer: 3500,
+                            timerProgressBar: true,
+                            didOpen: () => {
+                                Swal.showLoading()
+                                const b = Swal.getHtmlContainer().querySelector('b')
+                                timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft()
+                                }, 100)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        }).then((result) => {
+                            $("#aa").addClass('d-none');$("#bb").removeClass('d-none');$("#ilang").addClass('d-none');$("#image").addClass('d-none');$("#image2").removeClass('d-none');
+                        })
+                    })
+                })
+            })
+        }
+    </script>
+</body>
+</html>
